@@ -12,8 +12,15 @@ Documentation for [members of workers.coop](members/index.md):
 
 ## Administrators
 
+Documentation for [administrators of workers.coop](admins/index.md):
+
+* [Cal.com](admins/cal.md)
+* [Discourse](admins/discourse.md)
+* [Nextcloud](admins/nextcloud.md)
+* [WordPress/CiviCRM](admin/wordpress.md)
+
 ## Sysadmins
 
-* [Servers](sysadmin/servers.yml)
+* [Servers](sysadmin/servers.md)
 
 
