@@ -1,0 +1,10 @@
+---
+site_name: Workers.coop Docs
+site_url: https://docs.workers.coop/
+nav:
+    - Home: index.md
+    - Members: members/index.md
+    - Administrators: admins/index.md
+    - System Administrators: sysadmins/index.md
+theme: readthedocs
+...

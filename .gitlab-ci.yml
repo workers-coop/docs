@@ -1,0 +1,19 @@
+---
+variables:
+  PIPX_HOME: /opt
+  PIPX_BIN_DIR: /usr/local/bin
+  PY_COLORS: "1"
+before_script:
+  - apt update -qq
+  - apt dist-upgrade -qqy
+  - pipx install mkdocs
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+stages:
+  - deploy
+deploy:
+  image: registry.git.coop/webarch/containers/images/bookworm:20230605
+  stage: deploy
+  script:
+    - mkdocs build
+    - rsync -av ./site docs@office.workers.coop:sites/mkdocs/
