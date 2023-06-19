@@ -2,24 +2,28 @@
 variables:
   GIT_STRATEGY: none
   PY_COLORS: "1"
+before_script:
+  - mkdir ~/.ssh
+  - chmod 700 ~/.ssh
+  - cd ~/.ssh
+  - git clone https://git.coop/webarch/webarch-ssh.git
+  - echo "Include ~/.ssh/webarch-ssh/config" > ~/.ssh/config
+  - chmod 600 ~/.ssh/config
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - cd
 stages:
   - deploy
 deploy:
   image: registry.git.coop/webarch/containers/images/bookworm:20230605
   stage: deploy
   script:
-    - mkdir ~/.ssh
-    - chmod 700 ~/.ssh
-    - cd ~/.ssh
-    - git clone https://git.coop/webarch/webarch-ssh.git
-    - echo "Include ~/.ssh/webarch-ssh/config" > ~/.ssh/config
-    - chmod 600 ~/.ssh/config
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - cd
     - pipx install mkdocs
     - pipx ensurepath
     - git clone https://git.coop/workers/docs.git
     - cd docs
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/mkdocs/
+after_script:
+  - rm -rf /home/ansible/.ssh
+...
