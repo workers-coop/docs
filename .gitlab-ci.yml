@@ -9,9 +9,10 @@ deploy:
   stage: deploy
   script:
     - whoami
-    - pwd
     - mkdir ~/.ssh
     - chmod 600 ~/.ssh
+    - cd
+    - ls -lah
     - cd ~/.ssh
     - git clone https://git.coop/webarch/webarch-ssh.git
     - echo "Include ~/.ssh/webarch-ssh/config" > ~/.ssh/config
