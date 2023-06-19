@@ -20,5 +20,6 @@ deploy:
     - pipx install mkdocs
     - pipx ensurepath
     - git clone https://git.coop/workers/docs.git
+    - cd docs
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/mkdocs/
