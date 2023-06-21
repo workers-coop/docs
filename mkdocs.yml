@@ -8,8 +8,8 @@ nav:
   - 'Administrators':
       - 'Cal.com': 'admins/cal.md'
       - 'Discourse': 'admins/discourse.md'
-      - 'Nextcloud': 'admins/nextcloud.md'
-      - 'WordPress/CiviCRM': 'admin/wordpress.md'
+      - 'Nextcloud': 'admins/nc.md'
+      - 'WordPress/CiviCRM': 'admins/wp.md'
   - 'System Administrators':
       - 'DNS': 'sysadmins/dns.md'
       - 'Servers': 'sysadmins/servers.md'
