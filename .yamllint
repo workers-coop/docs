@@ -1,8 +1,11 @@
 ---
 extends: default
 yaml-files:
-  - '*.yaml'
-  - '*.yml'
+  - .gitlab-ci.yml
+  - .markdownlint.yaml
+  - mkdocs.yml
+  - .pre-commit-config.yaml
+  - .yamllint
 rules:
   braces:
     max-spaces-inside: 1
