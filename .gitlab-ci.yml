@@ -18,24 +18,22 @@ stages:
   - stage
   - live
 stage:
+  stage: dev
   image: registry.git.coop/webarch/containers/images/bookworm:20230605
-  environment: stage
   variables:
     SITE_NAME: STAGING DOCS
     SITE_URL: https://stage.docs.workers.coop/
-  stage: dev
   script:
     - git clone https://git.coop/workers/docs.git
     - cd docs
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/stage/
 live:
+  stage: live
   image: registry.git.coop/webarch/containers/images/bookworm:20230605
-  environment: live
   variables:
     SITE_NAME: workers.coop docs
     SITE_URL: https://docs.workers.coop/
-  stage: live
   script:
     - git clone https://git.coop/workers/docs.git
     - cd docs
