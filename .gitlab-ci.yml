@@ -18,7 +18,7 @@ stages:
   - stage
   - live
 stage:
-  stage: dev
+  stage: stage
   image: registry.git.coop/webarch/containers/images/bookworm:20230605
   variables:
     SITE_NAME: STAGING DOCS
