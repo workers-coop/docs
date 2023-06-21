@@ -2,7 +2,7 @@
 
 This repo contains the files that are used to build the live site at [docs.workers.coop](https://docs.workers.coop/) and staging site at [stage.docs.workers.coop](https://stage.docs.workers.coop/).
 
-When changes are committed to this repo the site is built in a Docker contaier and then rsync'ed to the server hosting the siteR, the `stage.docs.workers.coop` site is automatically updated with every commit, the live `docs.workers.coop` site update needs a manual click in the GitLab CI interface &mdash; please check your changes on the staging site before updating the live site!
+When changes are committed to this repo the site is built in a Docker contaier and then rsync'ed to the server hosting the site, the `stage.docs.workers.coop` site is automatically updated with every commit, the live `docs.workers.coop` site update needs [a manual click in the GitLab CI interface](https://git.coop/workers/docs/-/pipelines) &mdash; please check your changes on the staging site before updating the live site!
 
 You can use the GitLab editor at `git.coop` and the `stage.docs.workers.coop` site when working on this documentation or you can checkoit and host the site locally by installing MkDocs and starting a local web server:
 
