@@ -1,10 +1,17 @@
 ---
-site_name: Workers.coop Docs
-site_url: https://docs.workers.coop/
+site_name: !ENV [SITE_NAME, 'LOCAL DOCS']
+site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
 nav:
-    - Home: index.md
-    - Members: members/index.md
-    - Administrators: admins/index.md
-    - System Administrators: sysadmins/index.md
+  - 'Home': index.md
+  - 'Members':
+      - 'Single Sign-On': 'members/sso.md'
+  - 'Administrators':
+      - 'Cal.com': 'admins/cal.md'
+      - 'Discourse': 'admins/discourse.md'
+      - 'Nextcloud': 'admins/nextcloud.md'
+      - 'WordPress/CiviCRM': 'admin/wordpress.md'
+  - 'System Administrators':
+      - 'DNS': 'sysadmins/dns.md'
+      - 'Servers': 'sysadmins/servers.md'
 theme: readthedocs
 ...

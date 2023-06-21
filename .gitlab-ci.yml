@@ -11,19 +11,35 @@ before_script:
   - chmod 600 ~/.ssh/config
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - pipx install mkdocs
+  - pipx ensurepath
   - cd
 stages:
-  - deploy
-deploy:
+  - stage
+  - live
+stage:
   image: registry.git.coop/webarch/containers/images/bookworm:20230605
-  stage: deploy
+  environment:
+   SITE_NAME: STAGING DOCS
+   SITE_URL: https://stage.docs.workers.coop/
+  stage: dev
   script:
-    - pipx install mkdocs
-    - pipx ensurepath
+    - git clone https://git.coop/workers/docs.git
+    - cd docs
+    - mkdocs build
+    - rsync -av ./site docs@office.workers.coop:sites/stage/
+live:
+  image: registry.git.coop/webarch/containers/images/bookworm:20230605
+  environment:
+   SITE_NAME: workers.coop docs
+   SITE_URL: https://docs.workers.coop/
+  stage: live
+  script:
     - git clone https://git.coop/workers/docs.git
     - cd docs
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/mkdocs/
+  when: manual
 after_script:
   - rm -rf /home/ansible/.ssh
 ...
