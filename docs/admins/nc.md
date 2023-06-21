@@ -1,5 +1,3 @@
 # Nextcloud and ONLYOFFICE
 
 TODO
-
-
