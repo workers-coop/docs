@@ -1,3 +1,4 @@
-# WordPress / CiviCRM
+WordPress / CiviCRM
+===================
 
 TODO
