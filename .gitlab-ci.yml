@@ -28,7 +28,7 @@ stage:
   script:
     - git clone https://git.coop/workers/docs.git
     - cd docs
-    - ansible-lint .
+    - yamllint .
     - pymarkdown scan .
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/stage/
