@@ -35,6 +35,9 @@ See the MkDocs [getting started](https://www.mkdocs.org/getting-started/) and
 the [writing your docs](https://www.mkdocs.org/user-guide/writing-your-docs/)
 guides for more information.
 
+When adding a page simply create it and then edit the [mkdocs.yml](mkdocs.yml)
+to add it to the site navigation.
+
 Linting
 -------
 

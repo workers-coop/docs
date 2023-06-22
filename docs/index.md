@@ -5,7 +5,8 @@ Documentation for the website and services that are maintained for
 [workers.coop](https://workers.coop).
 
 This site has been built using [MkDocs](https://www.mkdocs.org/) and can be
-updated via [git.coop](https://git.coop/workers/docs).
+updated via
+[git.coop](https://git.coop/workers/docs#workerscoop-documentation).
 
 If you would like to contribute to this documentation project but using `git`
 sounds far too technical then please use the Nextcloud text editor at
