@@ -5,9 +5,9 @@ repos:
     hooks:
       - id: yamllint
         name: YAML Lint
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.35.0
+  - repo: https://github.com/jackdewinter/pymarkdown
+    rev: v0.9.11
     hooks:
-      - id: markdownlint
+      - id: pymarkdown
         name: Markdown Lint
 ...

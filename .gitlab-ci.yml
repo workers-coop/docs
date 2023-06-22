@@ -11,7 +11,9 @@ before_script:
   - chmod 600 ~/.ssh/config
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - pipx install ansible-lint
   - pipx install mkdocs
+  - pipx install pymarkdown
   - pipx ensurepath
   - cd
 stages:
@@ -27,6 +29,8 @@ stage:
     - git clone https://git.coop/workers/docs.git
     - cd docs
     - mkdocs build
+    - ansible lint .
+    - pymarkdown scan .
     - rsync -av ./site docs@office.workers.coop:sites/stage/
 live:
   stage: live
