@@ -1,6 +1,7 @@
 ---
 variables:
   GIT_STRATEGY: none
+  PATH: "${HOME}/.local/bin:${PATH}"
   PY_COLORS: "1"
 before_script:
   - mkdir ~/.ssh
@@ -11,9 +12,9 @@ before_script:
   - chmod 600 ~/.ssh/config
   - eval $(ssh-agent -s)
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
-  - pipx install ansible-lint
   - pipx install mkdocs
   - pipx install pymarkdownlnt
+  - pipx install yamllint
   - pipx ensurepath
   - cd
 stages:
