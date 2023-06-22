@@ -53,7 +53,7 @@ You can also install the linting packages locally and manually check the files,
 for example:
 
 ```bash
-pipx install pymarkdown
+pipx install pymarkdownlnt
 pipx install yamllint
 git clone git@git.coop:workers/docs.git
 cd docs

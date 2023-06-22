@@ -13,7 +13,7 @@ before_script:
   - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
   - pipx install ansible-lint
   - pipx install mkdocs
-  - pipx install pymarkdown
+  - pipx install pymarkdownlnt
   - pipx ensurepath
   - cd
 stages:
