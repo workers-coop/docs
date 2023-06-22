@@ -58,7 +58,7 @@ pipx install yamllint
 git clone git@git.coop:workers/docs.git
 cd docs
 yamllint .
-pymarkdown scan .
+pymarkdownlnt scan .
 ```
 
 Project Access

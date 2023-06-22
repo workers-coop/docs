@@ -29,7 +29,7 @@ stage:
     - git clone https://git.coop/workers/docs.git
     - cd docs
     - yamllint .
-    - pymarkdown scan .
+    - pymarkdownlnt scan .
     - mkdocs build
     - rsync -av ./site docs@office.workers.coop:sites/stage/
 live:
