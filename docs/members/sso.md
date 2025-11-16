@@ -18,7 +18,7 @@ The current services available to Members SSO users are:
 - Workers.coop Discourse (Forum)
 - Workers.coop Moodle (Learning Environment)
 - Workers.coop Nextcloud (Office Suite/Files/Collaboration)
-- Workers.coop WordPress (Backend for Admins)
+- Workers.coop WordPress (Backend inc CiviCRM for Admins)
 - Workers.coop WordPress (Frontend for all Members)
 
  
