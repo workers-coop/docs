@@ -1,4 +1,4 @@
-Servers
+Workers.coop Servers
 =======
 
 The `workers.coop` servers are managed using Ansible and the code for this is
@@ -19,17 +19,17 @@ The [conversations.workers.coop](https://conversations.workers.coop/) server,
 installed using the [Docker repo](https://github.com/calcom/docker) using the
 `conversations` account on the server and an Apache reverse proxy.
 
-chat.workers.coop
+chat.workers.coop (currently unavailable)
 -----------------
 
-The [chat.workers.coop](https://chat.workers.coop/) server provIdes a Matrix
+The [chat.workers.coop](https://chat.workers.coop/) server provides a Matrix
 service with a Synapse back-end and a Element front end.
 
 forum.workers.coop
 ------------------
 
 The [forum.workers.coop](https://forum.workers.coop/) server is running
-[Discourse](https://discourse.org/) in a Docker container, wit the host
+[Discourse](https://discourse.org/) in a Docker container, with the host
 providing an incomming and outgoing SMTP service configured using [this Ansible
 role](https://git.coop/webarch/discourse).
 
@@ -42,3 +42,8 @@ The [office.workers.coop](https://office.workers.coop/) server is running:
 * Nextcloud on the `cloud` account.
 * ONLYOFFICE.
 * Kimai.
+
+learn.workers.coop
+------------------
+
+The [learn.workers.coop](https://learn.workers.coop) server is running [Moodle](https://moodle.org) to provide a Virtual Learning Environment
