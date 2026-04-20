@@ -15,3 +15,5 @@ See the [thread from Liam](https://forum.workers.coop/t/group-folders-in-nextclo
 > You’ll find the Group Folder on the main file list when you login.
 >
 > Obviously if you need to share a specific file or folder with someone, or provide a public link, you can do so using the share functionality, but please don’t share a document, folder or share that has already been shared.
+
+Groups in Nextcloud are managed in Authentik.
