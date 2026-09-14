@@ -1,7 +1,7 @@
 CoTech Wiki
 =======
 
-URL: https://wiki.cotech.coop
+URL: [wiki.cotech.coop](https://wiki.cotech.coop/)
 Accessible by: CoTech + Workers.coop Members
 
 Existing members of CoTech can login without a Members SSO account.
