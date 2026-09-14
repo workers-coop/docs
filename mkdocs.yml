@@ -5,6 +5,8 @@ nav:
   - 'Home': index.md
   - 'Members':
       - 'Single Sign-On': 'members/sso.md'
+      - 'Nextcloud': 'members/nextcloud.md'
+      - 'CoTech Wiki': 'members/cotechwiki.md'
   - 'Administrators':
       - 'Cal.com': 'admins/cal.md'
       - 'Discourse': 'admins/discourse.md'
